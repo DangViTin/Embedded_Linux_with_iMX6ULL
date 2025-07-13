@@ -108,3 +108,17 @@
         ```
         ./build.sh -clean
         ```
+# Flash to emmc using uuu tool
+1. Install uuu tool
+    ```bash
+    sudo apt install uuu
+    ```
+2. Connect dev kit usb port to PC
+    - Check connected device
+        ```bash
+        uuu -lsusb
+        ```
+    - Download the `u-boot.imx` output file from the U-Boot root folder.
+        ```bash
+        uuu -b spl u-boot.imx
+        ```
