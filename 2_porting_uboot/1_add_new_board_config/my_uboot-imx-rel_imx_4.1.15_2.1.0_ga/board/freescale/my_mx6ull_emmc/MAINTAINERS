@@ -1,0 +1,5 @@
+MY_MX6ULL_EMMC BOARD
+M. Dang Vi Tin <dangvitin@gmail.com>
+S. Maintained
+F. board/freescale/my_mx6ull_emmc/
+F. include/configs/my_mx6ull_emmc.h
