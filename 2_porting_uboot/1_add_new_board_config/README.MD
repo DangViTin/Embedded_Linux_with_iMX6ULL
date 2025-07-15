@@ -96,16 +96,19 @@
 1. Using command line
     ```bash
     make ARCH=arm CROSS_COMPILE=../../../1_toolchain/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- my_mx6ull_emmc_defconfig
-
     make ARCH=arm CROSS_COMPILE=../../../1_toolchain/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -j12
     ```
 2. Using script file
-    - Build
+    - Copy script file to u-boot folder
+        ```bash
+        cp ../build.sh .
         ```
+    - Build
+        ```bash
         ./build.sh
         ```
     - Clean build
-        ```
+        ```bash
         ./build.sh -clean
         ```
 # Flash to emmc using uuu tool
