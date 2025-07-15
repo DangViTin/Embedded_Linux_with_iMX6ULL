@@ -784,16 +784,17 @@ struct display_info_t const displays[] = {{
 	.detect = NULL,
 	.enable	= do_enable_parallel_lcd,
 	.mode	= {
-		.name			= "TFT43AB",
-		.xres           = 480,
-		.yres           = 272,
-		.pixclock       = 108695,
+		.name			= "ST7265",
+		.xres           = 800,
+		.yres           = 480,
+		.pixclock       = 40000,
+		.hsync_len      = 4,
 		.left_margin    = 8,
-		.right_margin   = 4,
-		.upper_margin   = 2,
-		.lower_margin   = 4,
-		.hsync_len      = 41,
-		.vsync_len      = 10,
+		.right_margin   = 8,
+		.vsync_len      = 4,
+		.upper_margin   = 16,
+		.lower_margin   = 16,
+
 		.sync           = 0,
 		.vmode          = FB_VMODE_NONINTERLACED
 } } };
