@@ -12,7 +12,7 @@
     - .hsync_len        = 41,
     - .vsync_len        = 10,
 
-    + .name			    = "ST7265",
+    + .name             = "ST7265",
     + .xres             = 800,
     + .yres             = 480,
     + .pixclock         = 40000,
