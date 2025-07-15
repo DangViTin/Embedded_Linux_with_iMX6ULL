@@ -1,7 +1,7 @@
 # Edit files (u-boot root folder)
 1. In `my_mx6ull_emmc.h` change LCD parameter to you LCD specs (refer LCD datasheet)
     ```diff
-    - .name			= "TFT43AB",
+    - .name			  = "TFT43AB",
     - .xres           = 480,
     - .yres           = 272,
     - .pixclock       = 108695,
@@ -12,7 +12,7 @@
     - .hsync_len      = 41,
     - .vsync_len      = 10,
 
-    + .name			= "ST7265",
+    + .name			  = "ST7265",
     + .xres           = 800,
     + .yres           = 480,
     + .pixclock       = 40000,
