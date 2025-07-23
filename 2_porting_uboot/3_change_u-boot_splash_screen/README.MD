@@ -5,7 +5,7 @@
   <img src="my_mx6ull_emmc.bmp"/>
 </p>
 
-2. Save the bitmap (.bmp) file in the tools/logos/ directory, using your board's name. In this example, it is named my_mx6ull_emmc.bmp
+2. Save the bitmap (.bmp) file in the tools/logos/ directory, using your board's name. In this example, it is named ``my_mx6ull_emmc.bmp`` and must folow the board name.
 
 <p align="center">
   <img src="./u-boot_splash_screen.jpg" width="600"/>
