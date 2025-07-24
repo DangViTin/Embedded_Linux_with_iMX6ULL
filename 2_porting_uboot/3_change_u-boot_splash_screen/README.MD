@@ -5,11 +5,49 @@
   <img src="my_mx6ull_emmc.bmp"/>
 </p>
 
-2. Save the bitmap (.bmp) file in the tools/logos/ directory, using your board's name. In this example, it is named ``my_mx6ull_emmc.bmp`` and must folow the board name.
+2. Save the bitmap (.bmp) file in the tools/logos/ directory, using your board's name. In this example, it is named `my_mx6ull_emmc.bmp` and must folow the board name.
 
 <p align="center">
   <img src="./u-boot_splash_screen.jpg" width="600"/>
 </p>
+
+3. If you want to change the text `U-Boot 2016.03 (Jul 22 2025 - 22:41:35 +0700)` in `/drivers/video/cfb_console.c` edit
+    ```diff
+	- sprintf(info, " %s", version_string);
+	+ sprintf(info, " %s", "This U-boot built by me");
+    ```
+    Or if you want to hide the text completely, then comment the whole code block
+    ```c
+    sprintf(info, " %s", version_string);
+
+	space = (VIDEO_COLS - VIDEO_INFO_X) / VIDEO_FONT_WIDTH;
+	len = strlen(info);
+
+	if (len > space) {
+		int xx = VIDEO_INFO_X, yy = VIDEO_INFO_Y;
+		uchar *p = (uchar *) info;
+		while (len) {
+			if (len > space) {
+				video_drawchars(xx, yy, p, space);
+				len -= space;
+
+				p = (uchar *) p + space;
+
+				if (!y_off) {
+					xx += VIDEO_FONT_WIDTH;
+					space--;
+				}
+				yy += VIDEO_FONT_HEIGHT;
+
+				y_off++;
+			} else {
+				video_drawchars(xx, yy, p, len);
+				len = 0;
+			}
+		}
+	} else
+		video_drawstring(VIDEO_INFO_X, VIDEO_INFO_Y, (uchar *) info);
+    ```
 
 # Build
 1. Using command line

@@ -1978,7 +1978,8 @@ static void *video_logo(void)
 	if (board_cfb_skip())
 		return 0;
 
-	sprintf(info, " %s", version_string);
+	// sprintf(info, " %s", version_string);
+	sprintf(info, " %s", "This U-boot built by me");
 
 	space = (VIDEO_COLS - VIDEO_INFO_X) / VIDEO_FONT_WIDTH;
 	len = strlen(info);
