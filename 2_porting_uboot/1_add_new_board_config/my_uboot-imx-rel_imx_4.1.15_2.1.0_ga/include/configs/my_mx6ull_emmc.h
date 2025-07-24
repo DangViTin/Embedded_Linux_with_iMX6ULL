@@ -363,6 +363,7 @@
 #define CONFIG_VIDEO_BMP_RLE8
 #define CONFIG_VIDEO_BMP_LOGO
 #define CONFIG_IMX_VIDEO_SKIP
+#define CONFIG_CONSOLE_MUX
 #endif
 #endif
 
