@@ -42,8 +42,24 @@
     + #ifndef __MY_MX6ULL_EMMC_H
     + #define __MY_MX6ULL_EMMC_H
     ```
-
 3. In `my_mx6ull_emmc` directory
+    - `my_mx6ull_emmc.c`
+        ```diff
+        int checkboard(void)
+        {
+            if (is_mx6ull_9x9_evk())
+                puts("Board: MX6ULL 9x9 EVK\n");
+            else
+        -       puts("Board: MX6ULL 14x14 EVK\n");
+        +       puts("Board: My_MX6ULL_EMMC\n");
+            return 0;
+        }
+        ```
+        Changing text will reflect on Serial console.
+        <p>
+        <img src="./Board_name.png"/>
+        </p>
+
     - `Makefile`
         ```diff
         - obj-y  := mx6ullevk.o
