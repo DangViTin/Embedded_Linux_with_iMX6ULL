@@ -322,6 +322,7 @@
 #define CONFIG_USB_MAX_CONTROLLER_COUNT 2
 #endif
 
+/* Ethernet Configs */
 #ifdef CONFIG_CMD_NET
 #define CONFIG_CMD_PING
 #define CONFIG_CMD_DHCP
@@ -342,7 +343,7 @@
 #define CONFIG_ETHPRIME			"FEC"
 
 #define CONFIG_PHYLIB
-#define CONFIG_PHY_MICREL
+#define CONFIG_PHY_REALTEK
 #endif
 
 #define CONFIG_IMX_THERMAL
