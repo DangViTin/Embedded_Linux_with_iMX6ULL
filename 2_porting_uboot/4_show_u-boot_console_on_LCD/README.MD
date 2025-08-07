@@ -28,6 +28,19 @@
     <p align="center">
       <img src="U-boot_console_on_Serial_and_LCD.jpg"/>
     </p>
+
+5. To show U-boot console on LCD by default, edit `my_mx6ull_emmc.h`
+    ```diff
+    #define CONFIG_EXTRA_ENV_SETTINGS \
+	CONFIG_MFG_ENV_SETTINGS \
+	"script=boot.scr\0" \
+	"image=zImage\0" \
+	"console=ttymxc0\0" \
+	+ "stdout=serial,vga\0" \
+	+ "stderr=serial,vga\0" \
+	"fdt_high=0xffffffff\0" \
+	"initrd_high=0xffffffff\0" \
+    ```
 # Build
 1. Using command line
     ```bash
